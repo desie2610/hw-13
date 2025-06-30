@@ -39,7 +39,7 @@ const account = {
    */
   deposit(amount) {
     this.balance += amount
-    const transaction = this.createTransaction(amount, this.DEPOSIT)
+    const transaction = this.createTransaction(amount, "deposit")
     this.transactions.push(transaction)
   },
 
@@ -57,7 +57,7 @@ const account = {
 
 if (amount < this.withdraw) {
 this.balance -= amount
-    const transaction = this.createTransaction(amount, this.WITHDRAW)
+    const transaction = this.createTransaction(amount, "withdraw")
     this.transactions.push(transaction)
 } else {alert('не достатньо коштів')}
   },
